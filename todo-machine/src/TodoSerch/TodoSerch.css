@@ -1,0 +1,32 @@
+.TodoSerch{
+    background-color: aqua;
+    margin: 0 280px;
+    height: 64px;
+    width: calc(100% -62px);
+    color: red;  /*color de la letra del input al escribir dento del input*/
+    text-align: center;
+    box-shadow: 0px 5px 50px rgba(32, 35, 41, 0.25); /*esta propiedad crea una sombra difuminada desde casi cualquier elemento */
+    border: 2px solid #202329;  /*este es para el borde del boton */
+    border-radius: 22px; /*esto es para el radio del borde osea si queremos que quede cuadrado o enforma de o*/
+    font-family: 'Montserrat';/*este indica el tipo de letra*/
+    font-weight: 400;  /*especifica el grueso de la letra*/
+   
+    
+    
+}
+.TodoSerch::placeholder{
+    color: blue;  /*la letra por defecto del input va hacer azul*/
+    font-family: 'Montserrat';/*tipo de letra*/
+    font-weight: 400;  /*especifica el grueso de la letra*/
+
+}
+.TodoSerch:focus{
+    outline-color: green;  /*me muestra un mini borde al rededor de todo el input*/
+    
+    height: 20px;
+}
+.pConector{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}

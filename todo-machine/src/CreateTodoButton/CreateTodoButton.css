@@ -1,0 +1,26 @@
+.CreateTodoButton {
+    background-color: #61DAFA;
+    box-shadow: 0px 5px 25px rgba(97, 218, 250, 0.5);
+    border: none;
+    border-radius: 50%;
+    cursor: pointer;  /*me pone el button al final de todos los elementos*/
+    font-size: 50px;
+    position: fixed;
+    bottom: 24px;
+    right: 24px;   /*es para posicionarlo*/
+    font-weight: bold; /*es para poner la letra con negrita*/
+    color: #FAFAFA;
+    display: flex;  /*para posicion */
+    justify-content: center;/*nos dice que el contenido del button este en el centro pero esto es de izquierda a derecha*/
+    align-items: center; /*nos dice que el contenido del button este en el centro pero de arriba hacia abajo*/
+    height: 64px;
+    width: 64px;
+  
+    transform: rotate(0);  /*aqui ponemos el transfor en cero para iniciar la rotacion*/
+    transition: .3s ease; /*esto es para la transicion y el tiempo de demora la transicion del contenido de adentro*/
+    z-index: 1;
+  }
+  
+  .CreateTodoButton:hover {
+    transform: rotate(224deg);/*aqui ya le agregamos rotacion cuando el mouse este arriba del botton para esto sirve hover*/
+  }
