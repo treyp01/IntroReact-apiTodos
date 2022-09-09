@@ -7,7 +7,9 @@ import {CreateTodoButton} from '../CreateTodoButton';
 import {TodoContext}from '../TodoContext';
 import {Modal} from '../Modal';
 import { TodoForm } from "../TodoForm";
-
+import {TodosError} from "../TodosError";
+import {EmptyTodos} from "../EmptyTodos";
+import {TodosLoading} from "../TodosLoading";
 function AppUI(){
     const {error, loading, searchedTodos, completeTodo, deleteTodo, openModal, setOpenModal,}=React.useContext(TodoContext)
     return (
@@ -22,9 +24,9 @@ function AppUI(){
                
 
         <TodoList> 
-        {error && <p>Desesperate hubo un error...</p>}
-        {loading && <p>Estamos cargando</p>}
-        {(!loading && !searchedTodos.length) && <p>cree su primer todo</p>}{/*aqui estamos diciendo que si no estamos cargando y ademas no hay info enserchedtodos entonces cree su primer todo*/}
+        {error && <TodosError error={error} />}
+        {loading && <TodosLoading />}
+        {(!loading && !searchedTodos.length) && <EmptyTodos />}{/*aqui estamos diciendo que si no estamos cargando y ademas no hay info enserchedtodos entonces cree su primer todo*/}
 
         {searchedTodos.map(todo=>(
       

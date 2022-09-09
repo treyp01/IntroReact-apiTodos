@@ -1,29 +1,25 @@
-import React from "react";
-import './TodoItem.css'
-function TodoItem(props){
+import React from 'react';
+import { CompleteIcon } from '../TodoIcon/CompleteIcon';
+import { DeleteIcon } from '../TodoIcon/DeleteIcon';
+import './TodoItem.css';
 
-
-
-    return(
-        <li className="TodoItem">
-            <span className={`Icon Icon-check ${props.completed && 'Icon-check--active'}`} 
-                 onClick={props.onComplete}//aqui estamos mandando a llamar al metodo que se encuentra en app.js que se llama onComplete
-                
-            >
-                √
-            </span>
-            <p className={`TodoItem-p ${props.completed && 'TodoItem-p--complete'}`}>
-                {props.text}
-            </p>
-           
-            <span className="Icon Icon-delete"
-                  onClick={props.onDelete}//aqui estamos mandando a llamar al metodo que se encuentra en app.js que se llama onDelete
-            >
-                X
-            </span>
-        </li>
-    );
+function TodoItem(props) {
+  return (
+    <li className="TodoItem">
+      <CompleteIcon
+        completed={props.completed}
+        onComplete={props.onComplete}
+      />
+      <p
+        className={`TodoItem-p ${props.completed && 'TodoItem-p--complete'}`}
+      >
+        {props.text}
+      </p>
+      <DeleteIcon
+        onDelete={props.onDelete}
+      />
+    </li>
+  );
 }
-//<p className={`TodoItem-p ${props.completed && 'TodoItem-p--complete'}`}>
-//{props.text}  //lo que  nos dice es que se crea una clase todoItem-p y que si hay un props.completed y es true se agregue otra clase llamada todoItem-p--completed
-export {TodoItem};
+
+export { TodoItem };
