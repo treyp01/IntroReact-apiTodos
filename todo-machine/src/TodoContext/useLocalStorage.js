@@ -10,7 +10,7 @@ function useLocalStorage(itemName, initialValue){//vamos crear nuestro reacHub R
         try{
           
           //vamos a crear nuestro localStorage para que me guarde todos los datos en el navegador
-          const localStorageItem=localStorage.getItem('itemName');
+          const localStorageItem=localStorage.getItem(itemName);
            //vamos a crear localstoregeTodos para averiguar los datos de los usuarios y si en un caso son nuevo se le mandara  como 
             //un arreglo vacio para que puedan meter datos por primera ves
           let parcedItem;
